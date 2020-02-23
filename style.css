@@ -790,10 +790,24 @@ section {
   -webkit-user-select: none;
 }
 
+#portfolioModal3 .prev,
+#portfolioModal3 .next {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media only screen and (max-width: 1199px) {
   #portfolioModal3 .prev,
   #portfolioModal3 .next {
     color: rgba(0, 0, 0, 0.5);
+    background-color: unset;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  #portfolioModal3 .prev,
+  #portfolioModal3 .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
   }
 }
 
