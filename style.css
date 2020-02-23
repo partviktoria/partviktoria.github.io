@@ -15,7 +15,7 @@ body {
 }
 
 #intro {
-  background-image: url("pics/intro_bg.jpeg");
+  background-image: url("pics/intro_bg.jpg");
   opacity: 0.5;
   height: 100vh;
   min-width: 100%;
