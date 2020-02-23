@@ -557,21 +557,6 @@ section {
 }
 
 //PORTFOLIO GALLERY
-.row>.column {
-    padding: 0 8px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    width: 25%;
-}
-
 .modal {
     display: none;
     position: fixed;
@@ -623,7 +608,7 @@ section {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 40vh;
     width: auto;
     padding: 16px;
     margin-top: -50px;
@@ -638,8 +623,9 @@ section {
 
 #portfolioModal3 .prev,
 #portfolioModal3 .next {
-    color: rgba(0, 0, 0, 0.5);
-    background-color: white;
+    @media only screen and (max-width: 1199px) {
+        color: rgba(0, 0, 0, 0.5);
+    }
 }
 
 #portfolioModal4 .prev,
@@ -664,6 +650,11 @@ section {
     padding: 8px 12px;
     position: absolute;
     top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    @media only screen and (max-width: 1209px) {
+        color: rgba(0, 0, 0, 0.5);
+        background-color: unset;
+    }
 }
 
 .caption-container {
