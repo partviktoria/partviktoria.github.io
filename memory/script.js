@@ -83,7 +83,7 @@ let axolotl = new Animal("Mexikói axolotl", "(Ambystoma mexicanum)", "Harántfo
 animalContainer.push(axolotl);
 let aranyFakuszobeka = new Animal("Arany fakúszóbéka", "(Dendrobates auratus)", "Nyílméregbékafélék", "Kolumbia, Costa Rica, Nicaragua, Panama", "3-4 cm", "10 g", "10 év", "Nem fenyegetett", "animals/aranyFakuszobeka.jpg");
 animalContainer.push(aranyFakuszobeka);
-let KekLevelibeka = new Animal("Kék levelibéka", "(Litoria caerulea)", "Levelibéka-félék", "Új-Guinea, Észak-Ausztrália", "10 cm", "-", "16 év", "Nem fenyegetett", "animals/KekLevelibeka.jpg");
+let KekLevelibeka = new Animal("Kék levelibéka", "(Litoria caerulea)", "Levelibéka-félék", "Új-Guinea, Észak-Ausztrália", "10 cm", "-", "16 év", "Nem fenyegetett", "animals/KekLevelibeka.JPG");
 animalContainer.push(KekLevelibeka);
 let foltosSzalamandra = new Animal("Foltos szalamandra", "(Salamandra salamandra)", "Szalamandrafélék", "Európa, Nyugat-Ázsia, Észak-Afrika", "14-20 cm", "40 g", "14-30 év", "Nem fenyegetett", "animals/foltosSzalamandra.jpg");
 animalContainer.push(foltosSzalamandra);
