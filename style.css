@@ -15,7 +15,7 @@ body {
 }
 
 #intro {
-  background-image: url("pics/intro_bg.jpg");
+  background-image: url("pics/intro_bg.jpeg");
   opacity: 0.5;
   height: 100vh;
   min-width: 100%;
@@ -760,7 +760,7 @@ section {
   height: unset;
   -o-object-fit: contain;
      object-fit: contain;
-  max-height: 85vh;
+  max-height: 60vh;
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
