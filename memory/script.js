@@ -48,7 +48,7 @@ let rozellaPapagaj = new Animal("Rozellapapagáj", "(Platycercus eximius)", "Pap
 animalContainer.push(rozellaPapagaj);
 let kacagojancsi = new Animal("Kacagójancsi", "(Dacelo novaeguineae)", "Jégmadárfélék", "Ausztrália déli és keleti része", "39-42 cm", "310-480 g", "11-15 év", "Nem fenyegetett", "animals/kacagojancsi.jpg");
 animalContainer.push(kacagojancsi);
-let feketeHattyu = new Animal("Fekete hattyú", "(Cygnus atratus)", "Récefélék", "Délnyugat-Ausztrália, Tasmánia", "110-140 cm", "3,7-9 kg", "30-40 év", "Nem fenyegetett", "animals/feketeHattyu.jpg");
+let feketeHattyu = new Animal("Fekete hattyú", "(Cygnus atratus)", "Récefélék", "Délnyugat-Ausztrália, Tasmánia", "110-140 cm", "3,7-9 kg", "30-40 év", "Nem fenyegetett", "animals/feketeHattyu.JPG");
 animalContainer.push(feketeHattyu);
 let uregiBagoly = new Animal("Üregi bagoly", "(Athene cunicularia)", "Bagolyfélék", "Észak- és Dél-Amerika", "19-28 cm", "140-240 g", "6-8 év", "Nem fenyegetett", "animals/uregiBagoly.jpg");
 animalContainer.push(uregiBagoly);
@@ -100,7 +100,7 @@ let nappaliPavaszem = new Animal("Nappali pávaszem", "(Inachis io)", "Tarkalepk
 animalContainer.push(nappaliPavaszem);
 let poszmeh = new Animal("Réti poszméh", "(Bombus pratorum)", "Méhfélék", "Európa, Észak-Ázsia", "14-20 mm", "-", "28 nap", "Nem fenyegetett", "animals/poszmeh.jpg");
 animalContainer.push(poszmeh);
-let tiszavirag = new Animal("Tiszavirág", "(Palingenia longicauda)", "Tiszavirágok", "Tisza vízgyűjtő területei", "2,5-3,8 cm", "-", "1 nap (3 év lárvaként)", "Nem fenyegetett", "animals/tiszavirag.jpg");
+let tiszavirag = new Animal("Tiszavirág", "(Palingenia longicauda)", "Tiszavirágok", "Tisza vízgyűjtő területei", "2,5-3,8 cm", "-", "1 nap (3 év lárvaként)", "Nem fenyegetett", "animals/tiszavirag.JPG");
 animalContainer.push(tiszavirag);
 let kekLegivadasz = new Animal("Kék légivadász", "(Ischnura elegans)", "Légivadászok", "Európa", "27-35 mm", "-", "2 hónap-3 év", "Nem fenyegetett", "animals/kekLegivadasz.jpg");
 animalContainer.push(kekLegivadasz);
