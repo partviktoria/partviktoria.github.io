@@ -1,0 +1,789 @@
+$bg-color: #F3EFE4;
+$title-color:#1368C9;
+$text-color: #444444;
+$nav-color: #8AAFD9;
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $bg-color;
+}
+
+.navbar {
+    @media screen and (max-width: 992px) and (min-width: 768px) {
+        padding-left: 5px;
+        padding-right: 0;
+    }
+}
+
+.navbar-toggler {
+    margin-left: 10px;
+}
+
+.navbarTogglerIcon {
+    color: white !important;
+}
+
+.navbar-nav {
+    @media screen and (max-width: 1040px) {
+        padding-left: 1rem;
+    }
+}
+
+.nav-link {
+    font-size: 24px;
+    color: white !important;
+    @media screen and (max-width: 1040px) {
+        font-size: 20px;
+    }
+    @media screen and (max-width: 992px) {
+        font-size: 18px;
+    }
+    transition: font-size 500ms ease-in;
+    &:hover {
+        background-color: white;
+        color: $text-color !important;
+    }
+}
+
+.navbar-brand {
+    font-size: 32px;
+    @media screen and (max-width: 992px) and (min-width: 768px) {
+        margin-right: 0;
+    }
+    img {
+        filter: invert(100%);
+        width: 135px;
+        height: auto;
+        margin-right: 5px;
+        transition: all 500ms ease-in;
+    }
+    @media screen and (max-width: 1100px) {
+        font-size: 24px;
+        img {
+            width: 104px;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        font-size: 20px;
+        img {
+            width: 80px;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        img {
+            width: 73px;
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        font-size: 16px;
+        margin-left: unset !important;
+        img {
+            width: 45px;
+            height: auto;
+        }
+    }
+    transition: all 500ms ease-in;
+}
+
+.dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    background-color: $nav-color;
+    margin: 0;
+}
+
+.dropdown-item {
+    color: white;
+    &:hover {
+        color: $text-color;
+    }
+    &:active {
+        background-color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block !important;
+    }
+}
+
+.dropdown:hover .dropdown-toggle {
+    background-color: white;
+    color: $text-color !important;
+}
+
+.navbarActive {
+    padding: 0 !important;
+    background-color: $nav-color;
+    transition: background-color 500ms ease-in, padding 500ms ease-in;
+    .nav-link,
+    .dropdown-item {
+        font-size: 16px !important;
+        transition: font-size 500ms ease-in;
+    }
+    .navbar-brand {
+        font-size: 18px !important;
+        transition: all 500ms ease-in;
+    }
+    img {
+        height: 30px;
+        width: auto;
+        transition: all 500ms ease-in;
+    }
+    .nav-link:hover {
+        background-color: white;
+        color: $text-color !important;
+    }
+}
+
+.mainBanner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27)), url("mainBanner.jpg");
+    height: 80vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.pageBody {
+    background-color: white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    padding: 30px 50px;
+    @media screen and (max-width: 576px) {
+        padding: 0 15px;
+    }
+}
+
+.title {
+    color: $title-color;
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.text {
+    color: $text-color;
+    font-size: 16px;
+    @media screen and (max-width: 576px) {
+        font-size: 15px;
+    }
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: block;
+    color: white;
+    background-color: $title-color;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: auto;
+    border: 3px solid $title-color;
+    &:hover {
+        background-color: white;
+        color: $title-color;
+    }
+    &:hover a {
+        color: $title-color;
+    }
+    a {
+        text-align: center;
+        display: inline-block;
+        width: 256px;
+        height: 56px;
+        padding: 18px 0;
+        color: white;
+        &:hover {
+            color: $title-color;
+            text-decoration: none;
+        }
+        @media screen and (max-width: 576px) {
+            width: 200px;
+            font-size: 18px;
+        }
+        transition:all 300ms linear;
+    }
+    transition:all 300ms linear;
+}
+
+section {
+    margin-bottom: 25px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+#kikepzoink {
+    .col-md {
+        width: 300px;
+        height: 350px;
+        justify-content: center;
+        align-items: center;
+        margin: 25px auto;
+        flex-grow: unset;
+        padding-left: unset;
+        padding-right: unset;
+        @media screen and (max-width: 992px) {
+            min-width: 80%;
+            max-width: 80%;
+            height: 70vw;
+            margin: 10px auto;
+        }
+    }
+    img {
+        width: 300px;
+        height: 350px;
+        margin: auto;
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            height: 100%;
+        }
+        object-fit: cover;
+    }
+    .kikepzoText {
+        background-color: rgba(#FFFFFF, 0.8);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        opacity: 0;
+        @media screen and (max-width: 1140px) {
+            opacity: 1;
+        }
+        transition: all 300ms ease-in-out;
+        a {
+            color: $text-color;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .col-md:hover .kikepzoText {
+        opacity: 1 !important;
+    }
+    .kikepzoName {
+        font-size: 20px;
+    }
+    .kikepzoTitle {
+        font-size: 14px;
+    }
+}
+
+#rolunkMondtak {
+    .carousel {
+        height: 250px;
+    }
+    .title {
+        margin-bottom: 10px;
+    }
+    .carouselImg {
+        background-image: linear-gradient(rgba(#2D2D2D, 0.5), rgba(#2D2D2D, 0.5)), url("rolunkmondtak.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 250px;
+    }
+    #carouselExampleIndicators {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        bottom: 250px;
+    }
+    .carousel-caption {
+        position: static;
+        text-align: center;
+        width: 70%;
+        margin: 20px auto;
+    }
+    .carouselText {
+        font-size: 20px;
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+        @media screen and (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    .carouselName {
+        padding: 20px 0;
+        font-style: italic;
+        @media screen and (max-width: 576px) {
+            padding-top: 5px;
+            font-size: 12px;
+        }
+    }
+}
+
+#legfrissebbHirek {
+    .news {
+        margin-bottom: 15px;
+    }
+    .row {
+        padding: 15px 0;
+        box-shadow: 5px 5px 6px rgba(#000000, 0.16);
+    }
+    .col-10 {
+        padding: 3px 0;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .newsTitle {
+        font-size: 36px;
+        font-weight: 500;
+    }
+    .newsDate {
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .newsTextShort {
+        padding-right: 15px;
+    }
+    .newsMore {
+        a {
+            font-weight: 600;
+            color: $text-color;
+            &:hover i {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#kepek {
+    @media screen and (max-width: 576px) {
+        padding-bottom: 10px;
+    }
+    .col-md {
+        height: 300px;
+        min-width: 300px;
+        max-width: 315px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+        @media screen and (max-width: 768px) {
+            min-width: 80%;
+        }
+    }
+    img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        display: inline-block;
+        transition: 200ms ease-in-out;
+        @media screen and (max-width: 768px) {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .col-md:hover img {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 16;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        height: auto;
+        max-height: 80vh;
+    }
+    .modal-content,
+    #caption {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+    .close {
+        position: absolute;
+        top: 45px;
+        right: 35px;
+        color: rgb(29, 29, 29);
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .close:hover,
+    .close:focus {
+        color: $text-color;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 700px) {
+        .modal-content {
+            width: 100%;
+        }
+    }
+}
+
+.secondaryBanner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.27)), url("secondaryBanner.jpg");
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#iskolankrol {
+    .row {
+        vertical-align: middle;
+    }
+    .col-md-4 {
+        overflow: hidden;
+        height: 250px;
+        @media screen and (max-width: 768px) {
+            height: 350px;
+            margin-bottom: 25px;
+        }
+        vertical-align: middle;
+    }
+    img {
+        min-width: 100%;
+        max-width: 300px;
+        object-fit: cover;
+        object-position: center center;
+        @media screen and (max-width: 992px) {
+            max-width: 250px;
+        }
+        height: 250px;
+        @media screen and (max-width: 768px) {
+            height: 350px;
+        }
+    }
+}
+
+#csapatunk {
+    .row {
+        margin-top: 20px;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+    .kikepzoName {
+        font-size: 24px;
+    }
+    .kikepzoTitle {
+        font-size: 18px;
+    }
+    .text {
+        @media screen and (max-width: 768px) {
+            margin-top: 20px;
+        }
+    }
+}
+
+#kikepzes {
+    @extend #kikepzoink;
+    #kikepzesKep {
+        margin-bottom: 25px;
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+    }
+    .col-md {
+        @media screen and (max-width: 1140px) {
+            height: 100%;
+        }
+    }
+    img {
+        &[src="kutya3.jpeg"] {
+            object-position: top;
+        }
+        @media screen and (max-width: 1140px) {
+            min-height: 100%;
+        }
+        @media screen and (max-width: 992px) {
+            height: 80vw;
+        }
+    }
+    .kikepzoText {
+        overflow: hidden;
+        height: 0;
+        @media screen and (max-width: 1140px) {
+            height: unset;
+            opacity: 1;
+            position: relative;
+        }
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    .col-md:hover .kikepzoText {
+        height: 100%;
+    }
+    transition: 500ms ease-in-out;
+}
+
+#hirek {
+    @extend #legfrissebbHirek;
+    .page {
+        margin-top: 25px;
+        i {
+            font-size: 22px;
+        }
+    }
+    .page-item {
+        a {
+            color: $title-color;
+            border: 0;
+            border-radius: 0;
+        }
+    }
+    .disabled {
+        a {
+            color: grey;
+        }
+    }
+    .active {
+        a {
+            color: white;
+            background-color: $title-color;
+        }
+    }
+}
+
+#hir1 {
+    @extend #hirek;
+    img {
+        float: left;
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        margin-top: 15px;
+        margin-right: 20px;
+        @media screen and (max-width: 768px) {
+            float: none;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .text {
+        margin-top: 15px;
+    }
+    .vissza {
+        padding-bottom: 25px;
+        a {
+            color: $text-color;
+            font-weight: 600;
+            &:hover {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#galeria {
+    .col-md {
+        height: 300px;
+        min-width: 300px;
+        max-width: 315px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+        @media screen and (max-width: 768px) {
+            min-width: 80%;
+        }
+    }
+    .galleryImgPrev {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        display: inline-block;
+        transition: 200ms ease-in-out;
+        @media screen and (max-width: 768px) {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .col-md:hover img {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        background-color: black;
+    }
+    .modal-content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        max-width: 1200px;
+        max-height: 85%;
+        object-fit: contain;
+        background-color: unset;
+    }
+    .close {
+        color: white;
+        position: absolute;
+        top: 120px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        z-index: 999;
+        @media screen and (max-width: 1140px) {
+            top: 90px;
+        }
+        @media screen and (max-width: 768px) {
+            top: 75px;
+        }
+        @media screen and (max-width: 576px) {
+            top: 65px;
+        }
+    }
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .mySlides {
+        display: none;
+    }
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .active {
+        opacity: 1;
+    }
+}
+
+#kapcsolat {
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+    .contact {
+        height: 250px;
+        line-height: 60px;
+        text-align: left;
+        padding: 20px 40px;
+        @media screen and (max-width: 768px) {
+            line-height: 30px;
+            padding: 20px;
+            height: auto;
+        }
+    }
+    form {
+        width: 60%;
+        @media screen and (max-width: 768px) {
+            width: 80%;
+        }
+        margin: 30px auto;
+    }
+    input {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    textarea {
+        height: 200px;
+        width: 100%;
+        padding: 5px;
+        resize: none;
+    }
+    input:focus,
+    textarea:focus {
+        border: 2px solid black;
+    }
+    button {
+        margin-top: 25px;
+    }
+}
+
+footer {
+    background-color: #707070;
+    width: 100%;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+    .footerText {
+        display: inline-block;
+        width: 700px;
+        margin: auto;
+        padding: 5px 0;
+        text-align: center;
+    }
+    .footerIcons {
+        text-align: center;
+        padding: 5px 0;
+        a {
+            color: white;
+            padding: 0 5px;
+            font-size: 20px;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+}

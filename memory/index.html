@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Memóriajáték</title>
+</head>
+
+<body>
+    <div id="greenCircle"></div>
+    <div id="blueCircle"></div>
+    <div id="purpleCircle"></div>
+    <div id="pinkCircle"></div>
+    <div class="container" id="mainPage">
+        <h1>Memóriajáték</h1>
+        <div class="container">
+            <button type="button" id="newGameBtn" class="button">Új játék</button>
+        </div>
+    </div>
+
+    <div class="container d-flex" id="gamePage">
+        <div class="cardContainer"></div>
+        <div class="infoContainer">
+            <div class="animalPicContainer">
+                <div class="animalPicWrapper">
+                    <img src="" id="animalPic" alt="">
+                </div>
+            </div>
+            <div class="animalInfoContainer">
+                <div id="nameContainer"><span id="name">Név</span><span id="latin">(latin név)</span></div>
+                <div>Család: <span id="family"></span></div>
+                <div>Élőhely: <span id="distribution"></span></div>
+                <div>Hossz: <span id="length"></span></div>
+                <div>Tömeg: <span id="weight"></span></div>
+                <div>Várható élettartam: <span id="lifespan"></span></div>
+                <div>Természetvédelmi státusz: <span id="population"></span></div>
+            </div>
+            <div class="timerContainer"><span class="minute">00</span>:<span class="second">00</span></div>
+            <div class="buttonContainer">
+                <button type="button" class="button newGameBtnInGame">Új játék</button>
+                <button type="button" id="pauseGameBtn" class="button">Szünet</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="victoryScreenBg"></div>
+    <div class="container victoryScreen">
+        <div class="victoryText">Hurrá, sikerült teljesíteni a játékot!</div>
+        <div class="victoryText">Az időd: <span class="finalTimeText"></span></div>
+        <button type="button" class="button newGameBtnInGame">Új játék</button>
+    </div>
+
+</body>
+
+<script src="script.js "></script>
+
+</html>

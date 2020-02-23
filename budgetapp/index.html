@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Költségvetés applikáció</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-fluid summary shadow">
+            <i class="fas fa-angle-double-right"></i>
+            <div class="summaryNumbers">
+                <div id="sumText">Összesítő:</div>
+                <div id="sumAmount">0</div>
+                <div class="sumAll row">
+                    <div class="sumIncome col-md">0</div>
+                    <div class="sumExpense col-md">0</div>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div id="incomeChartContainer"></div>
+                <div id="expenseChartContainer"></div>
+            </div>
+        </div>
+
+        <div class="container-fluid form">
+            <form class="form-inline">
+                <input class="form-control m-2" type="date" name="date" required>
+                <select class="custom-select mr-3" name="type">
+                    <option value="+" selected>+</option>
+                    <option value="-">-</option>
+                </select>
+                <input class="form-control m-2" type="text" placeholder="Leírás" name="description">
+                <input class="form-control m-2" type="number" placeholder="Érték" name="value">
+                <button type="button" class="submitBtn m-2"><i class="far fa-check-circle"></i></button>
+            </form>
+        </div>
+        <div class="row budgetData">
+            <div class="income col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Bevételek</th>
+                        </tr>
+                    </thead>
+                    <tbody id="incomeTable"></tbody>
+                </table>
+            </div>
+            <div class="expense col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Kiadások</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenseTable"></tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="script.js"></script>
+
+</html>

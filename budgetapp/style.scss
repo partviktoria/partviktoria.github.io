@@ -1,0 +1,230 @@
+$border-color: #50d890;
+$income-color: rgb(16, 189, 103);
+$expense-color: rgb(233, 40, 14);
+$icon-color: #4f98ca;
+$animation-time:700ms;
+html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #272727;
+}
+
+.summary {
+    margin-top: 20px;
+    border: 2px solid $border-color;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    height: 300px;
+    @media screen and (max-width: 555px) {
+        height: 500px;
+    }
+    overflow: hidden;
+    i {
+        color: $icon-color;
+        float: right;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            transition: all 50ms ease-in-out;
+        }
+    }
+}
+
+.summaryNumbers {
+    position: relative;
+    left: 0px;
+    top: 45%;
+    transform: translateY(-45%);
+    margin: 0 15px;
+    opacity: 1;
+    transition: all $animation-time ease-in-out;
+}
+
+.summaryNumbersHide {
+    visibility: hidden;
+    left: 150px;
+    opacity: 0;
+    transition: all $animation-time ease-in-out;
+}
+
+.charts {
+    padding: 5px;
+    opacity: 0;
+    position: relative;
+    visibility: hidden;
+    bottom: 165px;
+    left: 150px;
+    margin: 0 15px;
+    @media screen and (max-width: 992px) {
+        bottom: 50%;
+    }
+    @media screen and (max-width: 767px) {
+        bottom: 80%;
+    }
+    @media screen and (max-width: 555px) {
+        bottom: 50%;
+        margin: 0;
+    }
+    transition: all $animation-time ease-in-out;
+}
+
+.chartsShow {
+    visibility: visible;
+    left: 0px;
+    opacity: 1;
+    transition: all $animation-time ease-in-out;
+}
+
+#incomeChartContainer {
+    display: inline-block;
+    height: 280px;
+    width: 310px;
+    margin: 0 50px;
+    @media screen and (max-width: 992px) {
+        height: 200px;
+        width: 225px;
+        margin: 0;
+    }
+}
+
+#expenseChartContainer {
+    display: inline-block;
+    height: 280px;
+    width: 310px;
+    margin: 0 50px;
+    @media screen and (max-width: 992px) {
+        height: 200px;
+        width: 225px;
+        margin: 0;
+    }
+}
+
+#sumAmount {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.sumAll {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+}
+
+@mixin sums($bg-color) {
+    width: 100%;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    background-color: $bg-color;
+    border-radius: 5px;
+}
+
+.sumIncome {
+    @include sums($income-color);
+}
+
+.sumExpense {
+    @include sums($expense-color);
+    ;
+}
+
+.budgetData {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    background-color: #fff;
+}
+
+.form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.form-inline {
+    display: inline-block;
+}
+
+.form-control,
+.custom-select {
+    &:focus {
+        border-color: white;
+        box-shadow: 0 0 0 0.2rem rgba(#4f98ca, 0.25);
+    }
+}
+
+.form-control[placeholder="Érték"] {
+    width: 100px;
+}
+
+.inputRequired {
+    box-shadow: 0 0 0 0.2rem rgba(#ff0000, 0.25);
+}
+
+.submitBtn {
+    vertical-align: middle;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: $icon-color;
+    i {
+        &:hover {
+            transform: scale(1.1);
+            transition: all 50ms ease-in-out;
+        }
+    }
+}
+
+@mixin budgetData($color) {
+    width: 50%;
+    margin: 0 15px;
+    tr:hover {
+        font-weight: bold;
+    }
+    th {
+        font-size: 20px;
+        font-weight: bold;
+        color: $color;
+        border-top: 0;
+    }
+    td {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    td:nth-child(3) {
+        text-align: right;
+        overflow: hidden;
+        color: $color;
+        span {
+            position: relative;
+            left: 20px;
+        }
+        i {
+            cursor: pointer;
+            opacity: 0;
+            height: 0;
+        }
+    }
+    tr:hover span {
+        left: 0px;
+        transition: left 0.5s ease-in-out;
+        i {
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}
+
+.income {
+    @include budgetData($income-color);
+}
+
+.expense {
+    @include budgetData($expense-color);
+}

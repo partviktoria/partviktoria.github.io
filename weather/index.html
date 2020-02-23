@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap-grid.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Időjárás</title>
+</head>
+
+<body>
+    <div class="form">
+        <form class="form-inline row">
+            <div class="form-group mt-3 input-group"><input type="text" name="city" placeholder="Város pl. Budapest" autofocus id="required" class="form-control ml-2 mb-sm-1"></div>
+            <button id="submit" type="reset" class="mt-4 btn btn-outline-light">Keres</button>
+        </form>
+    </div>
+
+    <div id="error" class="container"></div>
+    <div id="contentContainer">
+        <div class="weatherInfo container d-flex flex-row">
+
+            <div class="cityInfo">
+                <div class="city"></div>
+                <div class="date"></div>
+            </div>
+            <div class="weatherTemps">
+                <div class="temperature"></div>
+                <div class="tempMinMax">
+                    <div class="tempMinContainer"><span class="tempMin"></span></div>
+                    <div class="tempMaxContainer"><span class="tempMax"></span></div>
+                </div>
+            </div>
+            <div class="weatherDesc"></div>
+        </div>
+
+
+        <div class="container" id="additionalInfo">
+            <div class="d-flex flex-row">
+                <div id="sunrise"></div>
+                <div id="sunset"></div>
+                <div id="humidity"></div>
+            </div>
+            <div class="d-flex flex-row">
+                <div id="pressure"></div>
+                <div id="wind"></div>
+                <div id="cloud"></div>
+            </div>
+        </div>
+
+        <div class="container" id="forecastInfo">
+            <div class="d-flex flex-row">
+                <div class="flex-column forecastElems">
+                    <div class="forecastTime"></div>
+                    <div class="forecastImgContainer"><img class="forecastImg"></div>
+                    <div class="forecastDesc"></div>
+                    <div class="forecastTemp"></div>
+                </div>
+                <div class="flex-column forecastElems">
+                    <div class="forecastTime"></div>
+                    <div class="forecastImgContainer"><img class="forecastImg"></div>
+                    <div class="forecastDesc"></div>
+                    <div class="forecastTemp"></div>
+                </div>
+                <div class="flex-column forecastElems">
+                    <div class="forecastTime"></div>
+                    <div class="forecastImgContainer"><img class="forecastImg"></div>
+                    <div class="forecastDesc"></div>
+                    <div class="forecastTemp"></div>
+                </div>
+                <div class="flex-column forecastElems">
+                    <div class="forecastTime"></div>
+                    <div class="forecastImgContainer"><img class="forecastImg"></div>
+                    <div class="forecastDesc"></div>
+                    <div class="forecastTemp"></div>
+                </div>
+                <div class="flex-column forecastElems">
+                    <div class="forecastTime"></div>
+                    <div class="forecastImgContainer"><img class="forecastImg"></div>
+                    <div class="forecastDesc"></div>
+                    <div class="forecastTemp"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

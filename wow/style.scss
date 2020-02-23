@@ -1,0 +1,259 @@
+$font: "Segoe UI",
+Helvetica,
+sans-serif;
+$page-bg-color:#464646;
+$main-color:#232323;
+$secondary-color: #fff;
+$tab-header-color:#C5C5C5;
+$dk: #C41F3B;
+$dh:#A330C9;
+$druid:#FF7D0A;
+$hunter:#ABD473;
+$mage:#69CCF0;
+$monk:#00FF96;
+$paladin:#F58CBA;
+$priest:#FFFFFF;
+$rogue:#FFF569;
+$shaman:#2459FF;
+$warlock:#9482CA;
+$warrior:#C79C6E;
+$page-width: 1200px;
+body {
+    font-family: $font;
+    background-color: $page-bg-color;
+    line-height: 1.5;
+    cursor: context-menu;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    margin-right: 0;
+}
+
+#logo {
+    width: 1300px;
+}
+
+#logoCont {
+    width: 1300px;
+    margin: auto;
+}
+
+h1 {
+    color: $secondary-color;
+    text-align: center;
+    font-weight: bold;
+    font-size: 66px;
+}
+
+#main-content {
+    width: $page-width;
+    margin: auto;
+}
+
+@mixin default-button($color) {
+    color: $color;
+    border: 3px solid $secondary-color;
+    background-color: $main-color;
+    font-size: 16px;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rank-button {
+    @include default-button($secondary-color);
+    margin-right: 2px;
+    width: ($page-width - 46.74)/8;
+     :last-child {
+        margin-right: 0;
+    }
+}
+
+.rank-button-active {
+    background-color: $secondary-color;
+    color: $main-color;
+}
+
+.class-button {
+    width: ($page-width - 53)/13;
+    height: 55px;
+    flex: auto;
+    margin: 10px 0;
+}
+
+.all {
+    @include default-button($secondary-color);
+}
+
+.dk {
+    @include default-button($dk);
+}
+
+.dh {
+    @include default-button($dh);
+}
+
+.druid {
+    @include default-button($druid);
+}
+
+.hunter {
+    @include default-button($hunter);
+}
+
+.mage {
+    @include default-button($mage);
+}
+
+.monk {
+    @include default-button($monk);
+}
+
+.paladin {
+    @include default-button($paladin);
+}
+
+.priest {
+    @include default-button($priest);
+}
+
+.rogue {
+    @include default-button($rogue);
+}
+
+.shaman {
+    @include default-button($shaman);
+}
+
+.warlock {
+    @include default-button($warlock);
+}
+
+.warrior {
+    @include default-button($warrior);
+}
+
+.all-active {
+    background-color: $secondary-color;
+    color: $main-color;
+}
+
+.classes-active {
+    background-color: $secondary-color;
+}
+
+.priest-active {
+    background-color: $secondary-color;
+    color: $main-color;
+}
+
+#table {
+    background-color: $main-color;
+    color: $secondary-color;
+    border: 3px solid $secondary-color;
+}
+
+table {
+    border-collapse: collapse;
+    th {
+        width: $page-width / 7;
+        background-color: $tab-header-color;
+        color: $main-color;
+        border-bottom: 3px solid $secondary-color;
+        border-right: 3px solid $secondary-color;
+        padding: 8px 0;
+    }
+     :last-child {
+        border-right: 0;
+    }
+    tr {
+        border-bottom: 1px solid $tab-header-color;
+    }
+    td {
+        width: $page-width / 7;
+        text-align: center;
+        padding: 5px 0;
+        a {
+            padding: 0 5px;
+        }
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 125px;
+    background-color: $tab-header-color;
+    color: $main-color;
+    text-align: left;
+    border: 3px solid $secondary-color;
+    padding: 5px 3px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 70%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#error {
+    text-align: center;
+    width: $page-width;
+    span {
+        width: $page-width;
+        display: inline-block;
+        margin: auto;
+        padding: 5px;
+        background-color: $main-color;
+        border: 3px solid $secondary-color;
+        border-top: 0;
+        color: red;
+        box-sizing: border-box;
+    }
+}
