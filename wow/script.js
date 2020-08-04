@@ -1,4 +1,5 @@
-const urlGuild = 'https://cors-anywhere.herokuapp.com/https://raider.io/api/guilds/eu/ragnaros/Deep%20Tranquility/roster';
+//const urlGuild = 'https://cors-anywhere.herokuapp.com/https://raider.io/api/guilds/eu/ragnaros/Deep%20Tranquility/roster';
+const urlGuild = 'https://cors-anywhere.herokuapp.com/https://raider.io/api/guilds/roster?region=eu&realm=ragnaros&guild=Deep%20Tranquility'
 let urlChar;
 
 let membersInfo = [];
