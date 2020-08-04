@@ -67,8 +67,8 @@ body {
 .navbar-brand img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
-  width: 135px;
-  height: auto;
+  width: auto;
+  height: 105px;
   margin-right: 5px;
   -webkit-transition: all 500ms ease-in;
   transition: all 500ms ease-in;
@@ -79,8 +79,8 @@ body {
     font-size: 24px;
   }
   .navbar-brand img {
-    width: 104px;
-    height: auto;
+    width: auto;
+    height: 81px;
   }
 }
 
@@ -89,8 +89,8 @@ body {
     font-size: 20px;
   }
   .navbar-brand img {
-    width: 80px;
-    height: auto;
+    width: auto;
+    height: 62px;
   }
 }
 
@@ -99,8 +99,8 @@ body {
     font-size: 18px;
   }
   .navbar-brand img {
-    width: 73px;
-    height: auto;
+    width: auto;
+    height: 56px;
   }
 }
 
@@ -110,8 +110,8 @@ body {
     margin-left: unset !important;
   }
   .navbar-brand img {
-    width: 45px;
-    height: auto;
+    width: auto;
+    height: 35px;
   }
 }
 
