@@ -15,7 +15,7 @@ body {
 }
 
 #intro {
-  background-image: url("pics/intro_bg.jpg");
+  background-image: url("pics/intro_bg.jpeg");
   opacity: 0.5;
   height: 100vh;
   min-width: 100%;
@@ -217,12 +217,14 @@ section {
 }
 
 .technologies,
+.work,
 .internship {
   margin: 20px 0;
 }
 
 @media screen and (min-width: 576px) {
   .technologies,
+  .work,
   .internship {
     padding: 10px;
   }
@@ -230,12 +232,14 @@ section {
 
 @media screen and (max-width: 575px) {
   .technologies,
+  .work,
   .internship {
     padding: 5px;
   }
 }
 
 .technologies span,
+.work span,
 .internship span {
   color: #fff;
   font-size: 24px;
@@ -271,6 +275,7 @@ section {
   padding-top: 28%;
 }
 
+.work img,
 .internship img {
   width: 100%;
   margin: 15px 0;
@@ -278,25 +283,34 @@ section {
           filter: none;
 }
 
+.work img:hover,
 .internship img:hover {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
 
-#internship-date {
+#workplace {
+  font-size: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#work-text {
+  text-align: justify;
+}
+
+#internship-date,
+#work-date {
   font-size: 16px;
   margin: 0 auto 5px auto;
   font-weight: 100;
 }
 
-#internship-text {
+#internship-text,
+#work-text {
   color: #fff;
   text-align: justify;
   font-size: 18px;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 .cv {
@@ -322,6 +336,14 @@ a:hover {
   text-align: center;
   padding: 10px;
   position: relative;
+}
+
+.cv-button a {
+  color: #fff;
+}
+
+.cv-button a:hover {
+  text-decoration: none;
 }
 
 .cv-button:hover {
@@ -641,6 +663,14 @@ a:hover {
   padding: 10px;
 }
 
+.contact-button a {
+  color: #fff;
+}
+
+.contact-button a:hover {
+  text-decoration: none;
+}
+
 .contact-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -706,6 +736,21 @@ a:hover {
   color: #3A3A3A;
 }
 
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -733,7 +778,7 @@ a:hover {
   height: unset;
   -o-object-fit: contain;
      object-fit: contain;
-  max-height: 60vh;
+  max-height: 85vh;
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
@@ -762,7 +807,7 @@ a:hover {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40vh;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -780,23 +825,7 @@ a:hover {
 
 #portfolioModal3 .prev,
 #portfolioModal3 .next {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-@media only screen and (max-width: 1199px) {
-  #portfolioModal3 .prev,
-  #portfolioModal3 .next {
-    color: rgba(0, 0, 0, 0.5);
-    background-color: unset;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  #portfolioModal3 .prev,
-  #portfolioModal3 .next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-  }
+  color: rgba(0, 0, 0, 0.5);
 }
 
 #portfolioModal4 .prev,
@@ -821,7 +850,6 @@ a:hover {
   padding: 8px 12px;
   position: absolute;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .caption-container {
